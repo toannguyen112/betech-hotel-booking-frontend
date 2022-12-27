@@ -1,4 +1,3 @@
-import "./index.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./page/HomePage";
 import Login from "./page/Login";

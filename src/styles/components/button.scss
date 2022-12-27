@@ -1,0 +1,194 @@
+.btn {
+    // Button base
+    @apply inline-flex items-center no-underline cursor-pointer bg-transparent border border-transparent transition duration-150 ease-in-out p-4;
+    @media (prefers-reduced-motion: reduce) {
+        @apply transition-none;
+    }
+    height: 22px;
+}
+
+.btn-primary {
+    @apply bg-transparent flex items-center justify-center overflow-hidden relative text-white z-10 rounded-full;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-gray-800;
+    }
+    &:hover,
+    &:focus {
+        &::after {
+            @apply w-[150%] h-[250px] right-0;
+        }
+    }
+}
+
+.btn-primary.active {
+    @apply border-red-500 text-white #{!important};
+    &::after {
+        @apply w-[150%] h-[250px] right-0 border-red-500 text-white;
+    }
+}
+
+
+.btn-primary-disable {
+    @apply bg-gray-600 flex items-center justify-center overflow-hidden relative text-white z-10 rounded-full;
+}
+
+.btn-secondary {
+    @apply flex items-center justify-center overflow-hidden relative z-10 bg-white text-black border border-gray-800 ;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500 text-white border-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-white text-black;
+    }
+    &:hover {
+        @apply border-red-500 text-white #{!important};
+        &::after {
+            @apply w-[150%] h-[250px] right-0 border-red-500 text-white;
+        }
+    }
+}
+
+.btn-secondary.active {
+    @apply border-red-500 text-white #{!important};
+    &::after {
+        @apply w-[150%] h-[250px] right-0 border-red-500 text-white;
+    }
+}
+
+.btn-secondary-disable {
+    @apply bg-white flex items-center justify-center overflow-hidden relative text-gray-600 border border-gray-400 z-10 rounded-full;
+    transition: all 0.4s ease;
+}
+
+.btn-accent {
+    @apply bg-transparent flex items-center justify-center overflow-hidden relative text-white z-10 rounded-full;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-gray-400;
+    }
+    &:hover,
+    &:focus {
+        &::after {
+            @apply w-[150%] h-[250px] right-0;
+        }
+    }
+}
+
+.btn-primary-square {
+    @apply bg-transparent flex items-center justify-center overflow-hidden relative text-white z-10 border-gray-800 rounded-sm;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-gray-800;
+    }
+    &:hover,
+    &:focus {
+        @apply border-red-500;
+        &::after {
+            @apply w-[150%] h-[250px] right-0;
+        }
+    }
+}
+
+.btn-primary-square-disable {
+    @apply bg-gray-600 flex items-center justify-center overflow-hidden relative text-white z-10 rounded-sm;
+}
+
+.btn-secondary-square {
+    @apply bg-white flex items-center justify-center overflow-hidden relative text-black border border-gray-800 z-10 rounded-sm;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500 text-white border-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-white text-black;
+    }
+    &:hover,
+    &:focus {
+        @apply border-red-500 text-white #{!important};
+        &::after {
+            @apply w-[150%] h-[250px] right-0 border-red-500 text-white;
+        }
+    }
+}
+
+.btn-secondary-square-disable {
+    @apply bg-white flex items-center justify-center overflow-hidden relative text-gray-600 border border-gray-400 z-10 rounded-sm;
+    transition: all 0.4s ease;
+}
+
+.btn-primary-submit {
+    @apply bg-transparent flex items-center justify-center overflow-hidden relative text-white z-10 border-gray-800 rounded-sm;
+    transition: all 0.4s ease;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    &::after {
+        content: "";
+        @apply w-0 h-0 absolute right-0 bottom-[-10px] z-[-1] bg-red-500;
+        transition: all 0.6s ease;
+        border-radius: 100% 0% 0% 100% / 100% 30% 70% 0%;
+    }
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 left-0 z-[-2] bg-black;
+    }
+    &:hover,
+    &:focus {
+        @apply border-red-500;
+        &::after {
+            @apply w-[150%] h-[250px] right-0;
+        }
+    }
+}

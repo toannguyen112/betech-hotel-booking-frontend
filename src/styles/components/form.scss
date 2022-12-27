@@ -1,0 +1,88 @@
+.check-control {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @apply relative py-1;
+    .checkmark {
+        @apply absolute top-1/2 left-0 overflow-hidden transform -translate-y-1/2;
+        &:before {
+            @apply block w-full h-full;
+            content: "";
+        }
+    }
+    .input {
+        @apply w-[18px] h-[18px] border-gray-600 border rounded-[1px];
+    }
+    .image {
+        @apply w-[24px] h-[24px] rounded-full;
+    }
+    .label-check {
+        label {
+            @apply relative;
+            &:before {
+                @apply absolute bottom-0 left-[30px] right-0 h-px bg-gray-800 opacity-0 transition duration-200 ease-in-out;
+                content: "";
+            }
+        }
+        &:hover {
+            label {
+                &:before {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
+    input {
+        @apply absolute opacity-0 top-0 left-0 w-px h-px;
+        &:checked {
+            ~ .label-check {
+                @apply text-gray-800 font-medium;
+            }
+            ~ .checkmark {
+                @apply bg-black;
+                &:before {
+                    @apply bg-no-repeat opacity-100 bg-center;
+                    // background-image: url("/images/tick.svg");
+                }
+            }
+        }
+    }
+}
+
+.radio-control {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @apply relative;
+    .checkmark {
+        @apply absolute top-1/2 left-0 transform -translate-y-1/2 w-[18px] h-[18px] border-gray-400 border rounded-full;
+        &:before {
+            @apply block p-[32%] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+            content: "";
+        }
+    }
+    .radio-input {
+        @apply absolute opacity-0 top-0 left-0 w-px h-px;
+        &:checked {
+            ~ .checkmark {
+                @apply border-black;
+                &:before {
+                    @apply bg-black;
+                }
+            }
+        }
+    }
+}
+
+.select-control {
+    @apply relative;
+    select {
+        @apply pl-4 pr-8 py-2 focus:ring-0 focus:outline-none border border-gray-300 w-full h-full;
+    }
+}
+
+.input {
+    @apply text-[#4B5563] py-[0.5rem] px-[1rem] text-[14px] focus:ring-0 focus:outline-none border border-solid border-[#4B5563] rounded-[1rem];
+}

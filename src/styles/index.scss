@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import "antd/dist/antd.css";
+// @import "components/form";
+// @import "components/fonts";
+// @import "components/button";
+// @import "components/breadcrumb";
+// @import "components/table";
+// @import "components/sidebar";
+
+@layer base {
+    body {
+        --topbar-height: 4rem;
+        --sidebar-width: 16rem;
+        @apply text-gray-700 text-sm;
+    }
+
+    .sidebar {
+        @apply overflow-y-auto z-10;
+    }
+
+    svg,
+    img {
+        @apply max-w-full max-h-full;
+    }
+
+    textarea {
+        @apply resize-none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    a {
+        @apply block cursor-pointer;
+    }
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.map-container{
+    width: 100%;
+    height: 100vh
+}

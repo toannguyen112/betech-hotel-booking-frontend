@@ -1,0 +1,24 @@
+.table {
+    @apply align-middle shadow sm:rounded-lg min-w-full whitespace-nowrap;
+    table {
+        @apply min-w-full;
+    }
+    thead {
+        @apply bg-gray-50;
+    }
+    tbody {
+        @apply bg-white border-t border-gray-200;
+    }
+    tr {
+        @apply hover:bg-gray-50;
+        &:not(:last-child) {
+            @apply border-b border-gray-200;
+        }
+    }
+    th {
+        @apply px-6 h-[3.5em] font-medium bg-gray-50 text-left capitalize;
+    }
+    td {
+        @apply px-6 py-4 whitespace-pre-line;
+    }
+}

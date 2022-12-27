@@ -1,0 +1,12 @@
+.badge {
+    @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+.badge-success {
+    @apply text-green-700 bg-green-200;
+}
+.badge-danger {
+    @apply text-red-600 bg-red-200;
+}
+.badge-info {
+    @apply text-blue-700 bg-blue-200;
+}
