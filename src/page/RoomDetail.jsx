@@ -7,7 +7,6 @@ import Slider from "../components/Slider";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { orderRoom } from "../app/features/user/userActions";
-import Button from "../components/Button";
 
 function RoomDetail() {
 
@@ -65,11 +64,7 @@ function RoomDetail() {
         <div> {room.info} </div>
         <div className="text-[20px] font-bold">Giá phòng</div>
         <div> {room.price}đ </div>
-        <div >
-          <div onClick={() => order()}>
-            <Button title={"Đặt phòng"} />
-          </div>
-        </div>
+        <button className="btn btn-secondary" onClick={() => order()} >Đặt phòng</button>
       </section>
       <Footer />
     </div>

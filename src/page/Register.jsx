@@ -30,8 +30,8 @@ function Register() {
   }, [navigate, userInfo, success])
 
   const [form, setForm] = useState({
-    username: "user",
-    password: "user",
+    username: "",
+    password: "",
   });
 
   const register = () => {

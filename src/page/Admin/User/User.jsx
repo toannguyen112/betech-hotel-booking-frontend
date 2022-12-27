@@ -29,7 +29,7 @@ function User() {
           columns={[
             { field: "id", label: "id" },
             { field: "username", label: "ussername" },
-            { field: "status", label: "status" },
+            // { field: "status", label: "status" },
             { field: "phone", label: "phone" },
             { field: "createdAt", label: "createdAt" },
             { field: "updatedAt", label: "updatedAt" },

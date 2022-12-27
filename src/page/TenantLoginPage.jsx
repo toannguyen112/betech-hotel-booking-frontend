@@ -28,8 +28,8 @@ function TenantLoginPage() {
   }, [navigate, tenantInfo])
 
   const [form, setForm] = useState({
-    username: "tenant",
-    password: "tenant",
+    username: "",
+    password: "",
   });
 
   const login = () => {

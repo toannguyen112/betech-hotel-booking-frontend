@@ -28,8 +28,8 @@ function Login() {
   }, [navigate, userInfo])
 
   const [form, setForm] = useState({
-    username: "user",
-    password: "user",
+    username: "",
+    password: "",
   });
 
   const handleLogin = () => {

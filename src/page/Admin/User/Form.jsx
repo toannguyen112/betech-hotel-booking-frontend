@@ -97,7 +97,7 @@ function Form() {
             }}
           />
         </div>
-        <div className='col-span-6'>
+        {/* <div className='col-span-6'>
           <FieldSet
             updateModelValue={(status) => setForm({ ...form, status })}
             modelValue={form.status}
@@ -117,7 +117,7 @@ function Form() {
               }],
             }}
           />
-        </div>
+        </div> */}
       </div>
     </Authenticated>
   )

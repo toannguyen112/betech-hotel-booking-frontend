@@ -88,7 +88,7 @@ function Form() {
             }}
           />
         </div>
-        <button className="btn btn-primary text-[12px] w-[150px]" onClick={() => update()}>
+        <button className="btn btn-primary" onClick={() => update()}>
           Update
         </button>
       </div>
