@@ -21,7 +21,7 @@ function RoomDetail() {
 
   useEffect(() => {
     fetch(
-      `$${process.env.REACT_APP_BACKEND_URL}/rooms/show/${id}`)
+      `${process.env.REACT_APP_BACKEND_URL}/rooms/show/${id}`)
       .then((res) => res.json())
       .then((res) => {
         const room = res.data
