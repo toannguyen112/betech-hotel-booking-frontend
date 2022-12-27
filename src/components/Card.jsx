@@ -11,14 +11,13 @@ function Card({ props }) {
         <div className="text-black col-span-2 ">
           <div className="mb-[12px] text-black">
             <div className="text-[20px] font-bold text-black">{props.name} ⭐⭐</div>
-            <div className="text-[18px] py-2 text-black">{props.info}</div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="">
             <div className="flex items-center space-x-[8px]">
-              <img src={location} alt="location" className="w-[18px] h-[18px]" />
+              <img src={location} alt="location" className="w-[20px] h-[20px]" />
               <div>{props.address} </div>
             </div>
-            <div>{props.price}đ</div>
+            <div>Giá:{props.price}đ</div>
           </div>
         </div>
       </div>
