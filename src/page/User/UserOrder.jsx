@@ -40,8 +40,9 @@ function UserOrder() {
                       ) : <div> <img src="https://via.placeholder.com/100" alt="" className='w-full h-full aspect-square ' /> </div>
                     } */}
                     <div className="p-5">
-                      <h5 className="mb-2 text-xl font-bold tracking-tight  text-black">{item.room_name} </h5>
-                      <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Giá:{item.room_price} </h6>
+                      <h5 className="mb-2 text-lg font-bold tracking-tight  text-black">{item.room_name} </h5>
+                      <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Giá:{item.room_price}đ </h6>
+                      <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Trạng thái:{item.status} </h6>
                       <div className='space-x-2'>
                         <Link to={`/room/${item.id}`} href="#" className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                           Chi tiết

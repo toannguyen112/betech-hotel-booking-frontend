@@ -30,6 +30,7 @@ export default function Field({ field, updateModelValue, modelValue }) {
       {(() => {
         if (field.type === undefined || field.type === "text" || field.type === "password" || field.type === "number" || field.type === "datetime-local" || field.type === "date" || field.type === "time") {
           return <input
+            step="any"
             value={field.type === "date" && modelValue ? new Date(modelValue).toJSON()?.slice(0, 10) : modelValue}
             onChange={(e) => updateModelValue(e.target.value)} type={field.type}
             className={field.className ?? "border px-[20px] py-[10px] rounded-[10px] border-black"}

@@ -165,7 +165,7 @@ function TenantRoomUpdate() {
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Lat",
                                 type: "number",
-                                placeholder: "Lat",
+                                placeholder: "0,0"
                             }}
                         />
                     </div>
@@ -177,7 +177,7 @@ function TenantRoomUpdate() {
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Lng",
                                 type: "number",
-                                placeholder: "Lng",
+                                placeholder: "0,0"
                             }}
                         />
                     </div>
@@ -210,7 +210,7 @@ function TenantRoomUpdate() {
                             images && images.length ? (
                                 images.map((item, index) => {
                                     return (
-                                        <div key={index} className="border"><img src={item.path} alt="" className="max-w-[200px]" /></div>
+                                        <div key={index}><img src={item.path} alt="" className="max-w-[200px]" /></div>
                                     )
                                 })
                             ) : null
