@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import FieldSet from '../../components/Fields/FieldSet';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateTenant } from '../../app/features/tenant/tenantActions';
+import Button from '../../components/Button';
 
 function TenantProfile() {
     const { tenantInfo } = useSelector((state) => state.tenant);
@@ -74,9 +75,11 @@ function TenantProfile() {
                             }}
                         />
                     </div>
-                    <button className="btn btn-primary" onClick={() => update()}>
-                        Submit
-                    </button>
+                    <div >
+                        <div onClick={() => update()}>
+                            <Button title={"Submit"} />
+                        </div>
+                    </div>
                 </section>
             </section>
             <Footer />

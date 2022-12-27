@@ -190,10 +190,11 @@ function PostRoom() {
               />
             </div>
             <div className="col-span-full flex justify-end">
-              <button type="submit" className="btn btn-secondary">
+              <button type="submit" className="flex items-center justify-center overflow-hidden relative text-white px-[20px] py-[10px] rounded-full bg-black">
                 Đăng tin
               </button>
             </div>
+
           </div>
         </Form>
       </section >

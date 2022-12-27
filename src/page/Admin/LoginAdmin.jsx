@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FieldSet from "../../components/Fields/FieldSet";
+import Button from "../../components/Button";
 import ToastMessage from "../../components/ToastMessage";
 import { validateForm } from "../../validator";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +49,7 @@ function AdminLogin() {
     <React.Fragment>
       <ToastMessage />
       <section className="container py-[32px] flex justify-center h-[100vh] items-center">
-        <div className="space-y-[16px] shadow-sm rounded-[10px] p-12 border-[0.5px]">
+        <div className="space-y-[16px] shadow-xl rounded-[10px] p-12 border-[1px]">
           <div className="text-center font-bold text-[28px] mb-[60px]">Đăng nhập</div>
           <FieldSet
             updateModelValue={(username) => setForm({ ...form, username })}
@@ -79,8 +80,8 @@ function AdminLogin() {
 
             }}
           />
-          <div className="flex justify-center">
-            <button className="btn btn-primary w-full" onClick={() => handleLogin()} >Đăng nhập</button>
+          <div className="flex justify-center w-full" onClick={() => handleLogin()} >
+            <Button title="Đăng nhập" />
           </div>
         </div>
       </section>

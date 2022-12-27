@@ -74,13 +74,26 @@ function Sidebar() {
       </div>
       <div className="py-6 space-y-4">
         <div>
-          <div>
+          <div >
             {
               adminInfo ? sidebar.map((item, index) => {
                 return (
                   userExists(item.permission_name) ? (
                     <div className="nav-tab" key={index}>
-                      <NavLink to={item.route} className="nav-link">
+                      <NavLink to={item.route} className="cursor-pointer 
+                       w-full gap-2
+                        px-6 py-2
+                        text-[#4B5563] 
+                        transition 
+                        duration-150
+                         text-base 
+                      active:text-[#524FA1] 
+                      active:border-l-4
+                      active:border-[#FFCD5D]
+                       active:font-bold 
+                       hover:opacity-100 hover:text-[#524FA1]
+                       opacity-70
+                       ">
                         <div className="flex">
                           <span> {item.title} </span>
                         </div>
@@ -93,7 +106,7 @@ function Sidebar() {
           </div>
           <div className="py-6 space-y-4"></div>
           <div className="mt-auto">
-            <div className="nav-link">
+            <div className="cursor-pointer  w-full gap-2 px-6 py-2 text-[#4B5563] transition duration-150 text-base">
               <span onClick={() => handleLogout()} >Đăng xuất</span>
             </div>
           </div>

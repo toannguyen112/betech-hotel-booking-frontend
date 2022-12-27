@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import FieldSet from '../../components/Fields/FieldSet';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser } from '../../app/features/user/userActions';
+import Button from '../../components/Button';
 
 function UserProfile() {
     const { userInfo } = useSelector((state) => state.user);
@@ -75,13 +76,17 @@ function UserProfile() {
                                     }}
                                 />
                             </div>
-                            <button className="btn btn-primary" onClick={() => update()}>
-                                Submit
-                            </button>
+
                         </section>
+
                     </section>
                 ) : null
             }
+            <div className="container pb-[20px]">
+                <div className='w-full' onClick={() => update()}>
+                    <Button title="Submit" />
+                </div>
+            </div>
             <Footer />
         </React.Fragment>
     )

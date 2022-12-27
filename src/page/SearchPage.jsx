@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import {
   Link
 } from "react-router-dom";
+import Button from "../components/Button";
 
 function SearchPage() {
   const [rooms, setRooms] = useState([]);
@@ -37,9 +38,9 @@ function SearchPage() {
       <Header />
       <section className="container items-center space-x-[12px] flex py-[64px]">
         <Link to="/">
-          <button className="btn btn-primary" onClick={() => search()}>
-            quay lại
-          </button>
+          <div className="btn btn-primary" onClick={() => search()}>
+            <Button title={"quay lại"} />
+          </div>
 
         </Link>
         <div className="font-bold text-[40px]">Tìm kiếm</div>

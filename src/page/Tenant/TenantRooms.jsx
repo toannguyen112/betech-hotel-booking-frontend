@@ -16,11 +16,11 @@ function TenantRooms() {
                         {
                             tenantRooms.map((item, index) => {
                                 return (
-                                    <div key={index} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 col-span-4">
+                                    <div key={index} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 col-span-3">
                                         {
                                             item.images && item.images.length > 0 ? (
                                                 <img className="rounded-t-lg" src={item.images[0]?.path} alt="" />
-                                            ) : <div> <img src="https://via.placeholder.com/150" alt="" className='w-full h-full aspect-square ' /> </div>
+                                            ) : <div> <img src="https://via.placeholder.com/100" alt="" className='w-full h-full aspect-square ' /> </div>
                                         }
                                         <div className="p-5">
                                             <div href="#">
