@@ -36,7 +36,7 @@ function MediaManager() {
 
     useEffect(() => {
         fetch(
-            `{process.env.REACT_APP_BACKEND_URL}/media/index`)
+            `${process.env.REACT_APP_BACKEND_URL}/media/index`)
             .then((res) => res.json())
             .then((res) => {
                 setImages(res.data)

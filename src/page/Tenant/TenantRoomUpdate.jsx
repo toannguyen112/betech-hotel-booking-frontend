@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import FieldSet from "../../components/Fields/FieldSet";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -38,7 +38,7 @@ function TenantRoomUpdate() {
 
     useEffect(() => {
         fetch(
-            `{process.env.REACT_APP_BACKEND_URL}/rooms/show/${id}`)
+            `${process.env.REACT_APP_BACKEND_URL}/rooms/show/${id}`)
             .then((res) => res.json())
             .then((res) => {
                 const room = res.data

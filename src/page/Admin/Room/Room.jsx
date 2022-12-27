@@ -8,7 +8,7 @@ function Room() {
 
   useEffect(() => {
     fetch(
-      `{process.env.REACT_APP_BACKEND_URL}/admin/rooms`)
+      `${process.env.REACT_APP_BACKEND_URL}/admin/rooms`)
       .then((res) => res.json())
       .then((res) => {
         const room = res

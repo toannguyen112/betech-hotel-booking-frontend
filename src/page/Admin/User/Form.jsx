@@ -19,7 +19,7 @@ function Form() {
 
   useEffect(() => {
     fetch(
-      `{process.env.REACT_APP_BACKEND_URL}/user/show/${id}`)
+      `${process.env.REACT_APP_BACKEND_URL}/user/show/${id}`)
       .then((res) => res.json())
       .then((res) => {
         const user = res.data

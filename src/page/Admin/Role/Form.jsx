@@ -23,7 +23,7 @@ function Form() {
     useEffect(() => {
         setLoading(true);
         fetch(
-            `{process.env.REACT_APP_BACKEND_URL}/role/show/${id}`)
+            `${process.env.REACT_APP_BACKEND_URL}/role/show/${id}`)
             .then((res) => res.json())
             .then((res) => {
                 const role = res

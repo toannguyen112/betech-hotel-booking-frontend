@@ -30,7 +30,7 @@ function Form() {
     useEffect(() => {
         setLoading(true);
         fetch(
-            `{process.env.REACT_APP_BACKEND_URL}/admin/show/${id}`)
+            `${process.env.REACT_APP_BACKEND_URL}/admin/show/${id}`)
             .then((res) => res.json())
             .then((res) => {
                 const admin = res

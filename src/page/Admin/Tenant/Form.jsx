@@ -21,7 +21,7 @@ function Form() {
 
   useEffect(() => {
     fetch(
-      `{process.env.REACT_APP_BACKEND_URL}/tenant/show/${id}`)
+      `${process.env.REACT_APP_BACKEND_URL}/tenant/show/${id}`)
       .then((res) => res.json())
       .then((res) => {
         const tenant = res.data

@@ -12,7 +12,7 @@ function UserOrder() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`{process.env.REACT_APP_BACKEND_URL}/user/${userInfo?.id}/get-user-order`).then(res => res.json()).then((result) => {
+    fetch(`$${process.env.REACT_APP_BACKEND_URL}/user/${userInfo?.id}/get-user-order`).then(res => res.json()).then((result) => {
       setRooms(result.data)
       setIsLoading(false);
     }).catch((err) => {
