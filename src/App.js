@@ -82,58 +82,6 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/tenant/login" element={<TenantLoginPage />} />
           <Route path="/room/:id" element={<RoomDetail />} />
-
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-
-          <Route element={<ProtectedRouteTenant />}>
-            <Route path="/tenant/post-room" element={<PostRoom />} />
-            <Route path="/tenant/profile" element={<TenantProfile />} />
-            <Route path="/tenant/rooms" element={<TenantRoom />} />
-            <Route path="/tenant/room/update/:id" element={<TenantRoomUpdate />} />
-          </Route>
-
-          <Route element={<ProtectedRoute />}>
-            <Route path="/user/order" element={<UserOrder />} />
-            <Route path="/user/profile" element={<UserProfile />} />
-          </Route>
-
-          <Route path="/admin/login" element={<LoginAdmin />} />
-          <Route element={<ProtectedRouteAdmin />}>
-            <Route path="/admin/tenant" element={<Tenant />} />
-            <Route path="/admin/dashboard" element={<Dashboard />} />
-
-            <Route path="/admin/rooms" element={<Room />} />
-            <Route path="/admin/room/form" element={<AdminRoomShow />} />
-            <Route path="/admin/room/create" element={<AdminRoomCreate />} />
-
-            <Route path="/admin/tenant" element={<Tenant />} />
-            <Route path="/admin/tenant/form" element={<TenantShow />} />
-            <Route path="/admin/tenant/create" element={<TenantCreate />} />
-
-            <Route path="/admin/user" element={<User />} />
-            <Route path="/admin/user/form" element={<UserShow />} />
-            <Route path="/admin/user/create" element={<UserCreate />} />
-
-            <Route path="/admin/account" element={<Account />} />
-            <Route path="/admin/account/form" element={<AccountShow />} />
-            <Route path="/admin/account/create" element={<AccountCreate />} />
-
-            <Route path="/admin/role" element={<Role />} />
-            <Route path="/admin/role/form" element={<RoleShow />} />
-            <Route path="/admin/role/create" element={<RoleCreate />} />
-
-            <Route path="/admin/setting" element={<SettingPage />} />
-            <Route path="/admin/notification" element={<NotificationPage />} />
-            <Route path="/admin/map" element={<MapPage />} />
-            <Route path="/admin/profile" element={<Profile />} />
-          </Route>
-
-          <Route path="" element={<NotFoundPage />} />
-          <Route path="/media/manager" element={<MediaManager />} />
-          <Route path="*" element={<NotFoundPage />} />
-          <Route element={<NotFoundPage />} />
         </Routes>
       </Router>
     </React.Fragment>
