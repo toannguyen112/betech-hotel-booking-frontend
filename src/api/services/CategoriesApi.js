@@ -20,5 +20,6 @@ class CategoriesApi {
   async update(id) {
     return await api.put(`/categories/update/${id}`);
   }
+
 }
 export default CategoriesApi
