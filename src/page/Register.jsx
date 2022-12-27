@@ -6,6 +6,7 @@ import { validateForm } from "../validator";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../app/features/user/userActions";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function Register() {
 
@@ -82,7 +83,9 @@ function Register() {
             }}
           />
           <div className="flex justify-center">
-            <button disabled={loading} className="btn btn-primary w-full" onClick={() => register()}>Đăng Ký</button>
+            <div onClick={() => register()}>
+              <Button title={"Đăng Ký"} />
+            </div>
           </div>
         </div>
       </section>

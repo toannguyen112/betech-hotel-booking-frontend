@@ -9,6 +9,7 @@ import { getUserDetails } from '../app/features/user/userActions';
 import { logout } from '../app/features/user/userSlice';
 import { logout as logoutTenant } from '../app/features/tenant/tenantSlice';
 import { getTenantDetails, getTenantRooms } from '../app/features/tenant/tenantActions';
+import Button from './Button';
 
 function Header() {
 
@@ -53,8 +54,12 @@ function Header() {
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <NavLink to="/login" className="btn btn-primary">Đăng nhập</NavLink>
-                <NavLink to="/register" className="btn btn-primary">Đăng ký</NavLink>
+                <NavLink to="/login" className="btn btn-primary">
+                  <Button title="Đăng nhập" />
+                </NavLink>
+                <NavLink to="/register">
+                  <Button title="Đăng kí" />
+                </NavLink>
                 {
                   tenantToken ? (
                     <div className='relative group'>
@@ -70,7 +75,9 @@ function Header() {
                     </div>
                   ) : (
 
-                    <NavLink to="/tenant/login" className="btn btn-primary">Đăng tin mới</NavLink>
+                    <NavLink to="/tenant/login">
+                      <Button title="Đăng tin mới" />
+                    </NavLink>
                   )
                 }
               </React.Fragment>

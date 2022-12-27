@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Button() {
+function Button({ title }) {
     return (
-        <div>Button</div>
+        <button className="flex items-center justify-center overflow-hidden relative text-white px-[20px] py-[10px] rounded-full bg-black">
+            {title}
+        </button>
     )
 }
 

@@ -8,6 +8,7 @@ import Slider from "../components/Slider";
 import { pricesData, regionsData, sizesData } from "../seeds/data";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Button from "../components/Button";
 
 function HomePage() {
   const [form, setForm] = useState({
@@ -99,9 +100,7 @@ function HomePage() {
             />
           </div>
           <div className="col-span-full md:col-span-1 flex items-end h-full">
-            <button className="btn btn-primary" onClick={() => search()}>
-              Tìm kiếm
-            </button>
+            <div onClick={() => search()}><Button title="Tìm kiếm" /></div>
           </div>
         </div>
       </section>

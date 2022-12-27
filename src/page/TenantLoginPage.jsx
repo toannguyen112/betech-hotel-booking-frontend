@@ -7,6 +7,7 @@ import { validateForm } from "../validator";
 import { alertMessage } from "../utils/helpers";
 import { useDispatch, useSelector } from "react-redux";
 import { tenantLogin } from "../app/features/tenant/tenantActions";
+import Button from "../components/Button";
 
 function TenantLoginPage() {
   const dispatch = useDispatch();
@@ -79,7 +80,9 @@ function TenantLoginPage() {
             }}
           />
           <div className="flex justify-center">
-            <button className="btn btn-primary w-full" onClick={() => login()}>Đăng nhập</button>
+            <div onClick={() => login()}>
+              <Button title={"Đăng nhập"} />
+            </div>
           </div>
         </div>
       </section>

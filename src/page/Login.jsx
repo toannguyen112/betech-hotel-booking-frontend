@@ -6,6 +6,7 @@ import { validateForm } from "../validator";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../app/features/user/userActions";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function Login() {
 
@@ -80,7 +81,9 @@ function Login() {
             }}
           />
           <div className="flex justify-center">
-            <button className="btn btn-primary w-full" onClick={() => handleLogin()} >Đăng nhập</button>
+            <div onClick={() => handleLogin()}>
+              <Button title={"Đăng nhập"} />
+            </div>
           </div>
         </div>
       </section>

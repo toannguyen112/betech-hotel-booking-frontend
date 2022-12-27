@@ -32,7 +32,7 @@ export default function Field({ field, updateModelValue, modelValue }) {
           return <input
             value={field.type === "date" && modelValue ? new Date(modelValue).toJSON()?.slice(0, 10) : modelValue}
             onChange={(e) => updateModelValue(e.target.value)} type={field.type}
-            className={field.className ?? "input"}
+            className={field.className ?? "border px-[20px] py-[10px] rounded-[10px] border-black"}
             placeholder={field.placeholder}
             disabled={field.disable} />;
         }
@@ -80,7 +80,7 @@ export default function Field({ field, updateModelValue, modelValue }) {
                 <select
                   value={modelValue}
                   onChange={(e) => updateModelValue(e.target.value)}
-                  className="w-full h-full">
+                  className="w-full h-full border border-gray-300 px-[20px] py-[10px]">
                   {field.options?.map((item, index) => {
                     return (
                       <option key={index} value={field.typeValue === 'id' ? item.id : item.value}>
