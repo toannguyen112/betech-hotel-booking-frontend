@@ -28,7 +28,7 @@ function Create() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Account Create
+        Tạo mới tài khoản
       </div>
       <div className='grid grid-cols-12 gap-[32px]'>
         <div className='col-span-6'>
@@ -37,8 +37,8 @@ function Create() {
             updateModelValue={(name) => setForm({ ...form, name })}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Name",
-              placeholder: "Name",
+              title: "Tên",
+              placeholder: "Tên",
             }}
           />
         </div>
@@ -48,8 +48,8 @@ function Create() {
             updateModelValue={(username) => setForm({ ...form, username })}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Username",
-              placeholder: "Username",
+              title: "Tài khoản",
+              placeholder: "Tài khoản",
             }}
           />
         </div>
@@ -59,8 +59,8 @@ function Create() {
             updateModelValue={(password) => setForm({ ...form, password })}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Password",
-              placeholder: "Password",
+              title: "Mật khẩu",
+              placeholder: "Mật khẩu",
             }}
           />
         </div>
@@ -71,7 +71,7 @@ function Create() {
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] h-full",
               typeValue: "id",
-              title: "Role",
+              title: "Vai trò",
               type: "select_single",
               options: roles,
             }}

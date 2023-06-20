@@ -36,8 +36,8 @@ function Create() {
               updateModelValue={(category_id) => setForm({ ...form, category_id })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "category_id",
-                placeholder: "category_id",
+                title: "Thể loại",
+                placeholder: "Thể loại",
               }}
             />
           </div>
@@ -46,8 +46,8 @@ function Create() {
               updateModelValue={(city_id) => setForm({ ...form, city_id })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "city_id",
-                placeholder: "city_id",
+                title: "Thành phố",
+                placeholder: "Thành",
               }}
             />
           </div>
@@ -56,9 +56,9 @@ function Create() {
               updateModelValue={(exp_date) => setForm({ ...form, exp_date })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "exp_date",
+                title: "Ngày hết hạn",
                 type: "date",
-                placeholder: "exp_date",
+                placeholder: "Ngày hết hạn",
               }}
             />
           </div>
@@ -67,9 +67,9 @@ function Create() {
               updateModelValue={(number_room) => setForm({ ...form, number_room })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "number_room",
+                title: "Số phòng",
                 type: "number",
-                placeholder: "number_room",
+                placeholder: "Số phòng",
               }}
             />
           </div>
@@ -78,8 +78,8 @@ function Create() {
               updateModelValue={(address) => setForm({ ...form, address })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "address",
-                placeholder: "address",
+                title: "Địa chỉ",
+                placeholder: "Địa chỉ",
               }}
             />
           </div>
@@ -88,7 +88,7 @@ function Create() {
               updateModelValue={(price) => setForm({ ...form, price })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "price",
+                title: "Giá",
                 type: "number",
                 placeholder: "price",
               }}
@@ -99,9 +99,9 @@ function Create() {
               updateModelValue={(info) => setForm({ ...form, info })}
               field={{
                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                title: "Phone",
+                title: "Số điện thoại",
                 type: "number",
-                placeholder: "Phone",
+                placeholder: "Số điện thoại",
               }}
             />
           </div>

@@ -69,14 +69,14 @@ function UserProfile() {
                                     updateModelValue={(phone) => setForm({ ...form, phone })}
                                     field={{
                                         className: "w-full border rounded-md border-black p-[12px]",
-                                        title: "Phone",
+                                        title: "Số điện thoại",
                                         type: "number",
-                                        placeholder: "Phone",
+                                        placeholder: "Số điện thoại",
                                     }}
                                 />
                             </div>
                             <button className="btn btn-primary" onClick={() => update()}>
-                                Submit
+                                Gửi
                             </button>
                         </section>
                     </section>

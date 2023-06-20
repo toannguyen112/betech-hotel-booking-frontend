@@ -68,14 +68,14 @@ function TenantProfile() {
                             updateModelValue={(phone) => setForm({ ...form, phone })}
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
-                                title: "Phone",
+                                title: "Số diện thoại",
                                 type: "number",
-                                placeholder: "Phone",
+                                placeholder: "Số diện thoại",
                             }}
                         />
                     </div>
                     <button className="btn btn-primary" onClick={() => update()}>
-                        Submit
+                        Gửi
                     </button>
                 </section>
             </section>

@@ -163,7 +163,7 @@ function TenantRoomUpdate() {
                             updateModelValue={(lat) => setForm({ ...form, lat })}
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
-                                title: "Lat",
+                                title: "Tung độ",
                                 type: "number",
                                 placeholder: "0,0"
                             }}
@@ -175,7 +175,7 @@ function TenantRoomUpdate() {
                             updateModelValue={(lng) => setForm({ ...form, lng })}
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
-                                title: "Lng",
+                                title: "Vĩ độ",
                                 type: "number",
                                 placeholder: "0,0"
                             }}

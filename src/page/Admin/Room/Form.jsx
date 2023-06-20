@@ -56,7 +56,7 @@ function Form() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Room/edit/{id}
+        Phòng / Chỉnh sửa /{id}
       </div>
       <div className='grid grid-cols-12 gap-[32px]'>
         <div className='col-span-6'>
