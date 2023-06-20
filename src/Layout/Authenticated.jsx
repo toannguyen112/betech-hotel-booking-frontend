@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar'
 export default function Authenticated(props) {
     return (
         <React.Fragment>
+
             <Sidebar />
             <main className="ml-[var(--sidebar-width)] md:flex-1">
                 <HeaderAdmin />
