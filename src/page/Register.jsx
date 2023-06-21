@@ -19,6 +19,7 @@ function Register() {
   const [rules, setRules] = useState({
     "username": "required",
     "password": "required|password",
+    "reset_pass": "required|password",
   },);
 
   const dispatch = useDispatch()
@@ -33,17 +34,20 @@ function Register() {
   const [form, setForm] = useState({
     username: "",
     password: "",
+    reset_pass: "",
   });
 
   const register = () => {
     const errors = validateForm(form, rules);
     setErrors(errors)
     if (Object.keys(errors).length > 0) {
-      if (errors.username === '' && errors.password === '') return alert("Please input your username and password");
+      if (errors.username === '' && errors.password === '') return alert("Vui lòng nhập lại tên và mật khẩu");
 
-      if (errors.username === '') return alert("Please input your username",);
+      if (errors.username === '') return alert("Vui lòng nhập lại tên");
 
-      if (errors.password === '') return alert("Please input your password",);
+      if (errors.password === '') return alert("Vui lòng nhập lại mật khẩu");
+
+      if (errors.password != error.reset_pass) return alert("Mật khẩu không khớp");
     }
 
     dispatch(registerUser(form));
@@ -65,6 +69,11 @@ function Register() {
             <Password
               placeholder="Mật khẩu"
               value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} toggleMask />
+          </div>
+          <div>
+            <Password
+              placeholder="Nhập lại mật khẩu"
+              value={form.reset_pass} onChange={(e) => setForm({ ...form, reset_pass: e.target.value })} toggleMask />
           </div>
           <div className="flex justify-center">
             <div onClick={() => register()}>

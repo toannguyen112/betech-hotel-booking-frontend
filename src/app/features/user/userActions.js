@@ -20,6 +20,8 @@ export const registerUser = createAsyncThunk(
                 { username, password },
                 config
             )
+
+            alert("Đăng kí thành công")
         } catch (error) {
             if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)

@@ -30,7 +30,11 @@ class UserApi {
     }
 
     async userOrders(id) {
-        return await api.get(`user/${id}/get-user-order`);
+        return await api.get(`/user/${id}/get-user-order`);
+    }
+
+    async userDeleteRoom(userId, roomId) {
+        return await api.delete(`/user/${userId}/delete-room/${roomId}`);
     }
 }
 
