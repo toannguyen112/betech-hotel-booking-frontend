@@ -172,6 +172,7 @@ function PostRoom() {
                 field={{
                   className: "border-black p-[12px] border w-full rounded-md",
                   title: "Mô tả",
+                  type: 'textarea',
                   placeholder: "Mô tả",
                 }}
               />

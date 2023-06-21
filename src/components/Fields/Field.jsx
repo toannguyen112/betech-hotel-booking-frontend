@@ -33,7 +33,7 @@ export default function Field({ field, updateModelValue, modelValue }) {
             step="any"
             value={field.type === "date" && modelValue ? new Date(modelValue).toJSON()?.slice(0, 10) : modelValue}
             onChange={(e) => updateModelValue(e.target.value)} type={field.type}
-            className={field.className ?? "border px-[20px] py-[10px] rounded-[10px] border-black"}
+            className={field.className ?? " px-[20px] py-[10px] rounded-[10px] "}
             placeholder={field.placeholder}
             disabled={field.disable} />;
         }

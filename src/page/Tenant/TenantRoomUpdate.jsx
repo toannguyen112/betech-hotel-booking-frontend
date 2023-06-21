@@ -187,6 +187,8 @@ function TenantRoomUpdate() {
                             updateModelValue={(info) => setForm({ ...form, info })}
                             field={{
                                 className: "border-black p-[12px] border w-full rounded-md",
+                                type: 'textarea',
+                                rows: 4,
                                 title: "Mô tả",
                                 placeholder: "Mô tả",
                             }}

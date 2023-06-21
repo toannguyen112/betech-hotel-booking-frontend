@@ -35,6 +35,7 @@ function TenantProfile() {
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Tài khoản",
+                                disable: true,
                                 placeholder: "Tài khoản",
                             }}
                         />
@@ -46,6 +47,7 @@ function TenantProfile() {
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Mật khẩu",
+                                disable: true,
                                 type: "password",
                                 placeholder: "Mật khẩu",
                             }}
