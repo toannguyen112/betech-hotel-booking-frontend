@@ -12,6 +12,7 @@ function UserOrder() {
   const { userInfo, userToken } = useSelector((state) => state.user);
 
   useEffect(() => {
+
     setIsLoading(true);
     fetch(`${process.env.REACT_APP_BACKEND_URL}/user/${userInfo?.id}/get-user-order`)
       .then(res => res.json()).then((result) => {
@@ -24,8 +25,8 @@ function UserOrder() {
 
   }, [userInfo]);
 
-  const remove = async (id) => {
-    new UserApi().userDeleteRoom(userInfo?.id, id).then((res) => {
+  const remove = async (roomId) => {
+    new UserApi().userDeleteRoom(userInfo?.id, roomId).then((res) => {
       const rooms = res.data.data;
       setRooms(rooms)
       setIsLoading(false);
@@ -45,6 +46,7 @@ function UserOrder() {
                   <div key={index} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 col-span-3">
                     <div className="p-5">
                       <h5 className="mb-2 text-lg font-bold tracking-tight  text-black">{item.room_name} </h5>
+                      <h5 className="mb-2 text-lg font-bold tracking-tight  text-black">{item.id} </h5>
                       <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Giá:{item.room_price}đ </h6>
                       <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Trạng thái:{item.status} </h6>
                       <div className='space-x-2 flex'>
