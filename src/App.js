@@ -54,7 +54,14 @@ import SettingPage from "./page/Admin/SettingPage";
 import NotificationPage from "./page/Admin/NotiPage";
 import ProtectedRouteTenant from "./ProtectedRouteTenant";
 
-import MediaManager from "../src/components/MediaManager";;
+import MediaManager from "../src/components/MediaManager";
+
+//theme
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+
+//core
+import "primereact/resources/primereact.min.css";
+
 
 function App() {
   const dispatch = useDispatch();

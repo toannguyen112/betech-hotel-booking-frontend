@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { tenantLogin, getTenantDetails, getTenantRooms, updateTenant, createTenant } from './tenantActions';
+import { tenantLogin, getTenantDetails, getTenantRooms, updateTenant, createTenant, deleteTenantRoom } from './tenantActions';
 
 const tenantToken = localStorage.getItem('tenantToken')
     ? localStorage.getItem('tenantToken')
@@ -93,6 +93,16 @@ export const tenantSlice = createSlice({
             state.tenantRooms = payload.data
         },
         [getTenantRooms.rejected]: (state, { payload }) => {
+            state.loading = false
+        },
+
+        [deleteTenantRoom.pending]: (state) => {
+            state.loading = true
+        },
+        [deleteTenantRoom.fulfilled]: (state, { payload }) => {
+            state.loading = false
+        },
+        [deleteTenantRoom.rejected]: (state, { payload }) => {
             state.loading = false
         },
     },

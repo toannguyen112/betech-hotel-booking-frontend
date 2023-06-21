@@ -3,9 +3,19 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header'
+import { useDispatch } from 'react-redux';
+import { deleteTenantRoom, getTenantRooms } from '../../app/features/tenant/tenantActions';
 
 function TenantRooms() {
     const { tenantRooms } = useSelector((state) => state.tenant);
+
+    const dispatch = useDispatch();
+
+    const remove = async (id) => {
+        await dispatch(deleteTenantRoom({ id }));
+        await dispatch(getTenantRooms());
+    }
+
     return (
         <React.Fragment>
             <Header />
@@ -27,15 +37,18 @@ function TenantRooms() {
                                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.name} </h5>
                                             </div>
                                             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.info} </p>
-                                            <div className='space-x-2'>
+                                            <div className='space-x-2 flex overflow-x-auto items-center'>
                                                 <Link to={`/room/${item.id}`} href="#" className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                     Chi tiết
-                                                    <svg aria-hidden="true" className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                                                 </Link>
                                                 <Link to={`/tenant/room/update/${item.id}`} href="#" className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                     Cập nhật phòng
-                                                    <svg aria-hidden="true" className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                                                 </Link>
+                                                <div
+                                                    onClick={() => remove(item.id)}
+                                                    className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                    Xóa bài đăng
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

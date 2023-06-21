@@ -23,30 +23,30 @@ function Sidebar() {
       permission_name: "rooms"
     },
     {
-      title: "Map",
+      title: "Bản đồ",
       route: "/admin/map",
       permission_name: "maps"
     }
     ,
     {
-      title: "Tenant",
+      title: "Người thuê",
       route: "/admin/tenant",
       permission_name: "tenants"
 
     },
     {
-      title: "User",
+      title: "Người dùng",
       route: "/admin/user",
       permission_name: "users"
     }
     ,
     {
-      title: "Account",
+      title: "Tài khoản",
       route: "/admin/account",
       permission_name: "accounts"
     },
     {
-      title: "Role",
+      title: "Vai trò",
       route: "/admin/role",
       permission_name: "roles"
     }

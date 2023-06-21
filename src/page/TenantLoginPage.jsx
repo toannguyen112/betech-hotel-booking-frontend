@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FieldSet from "../components/Fields/FieldSet";
+import { Password } from 'primereact/password';
+import { InputText } from "primereact/inputtext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,7 @@ import { validateForm } from "../validator";
 import { alertMessage } from "../utils/helpers";
 import { useDispatch, useSelector } from "react-redux";
 import { tenantLogin } from "../app/features/tenant/tenantActions";
-import Button from "../components/Button";
+import { Button } from 'primereact/button';
 
 function TenantLoginPage() {
   const dispatch = useDispatch();
@@ -51,37 +52,21 @@ function TenantLoginPage() {
       <Header />
       <section className="container py-[32px] flex justify-center">
         <div className="space-y-[16px]">
-          <FieldSet
-            modelValue={form.username}
-            updateModelValue={(username) => setForm({ ...form, username })}
-            field={{
-              title: "Tài khoản",
-              label: 'Tài khoản',
-              fieldName: "username",
-              placeholder: "tài khoản",
-              isRequired: true,
-              rules: rules,
-              errors: errors,
-            }}
-          />
-          <FieldSet
-            modelValue={form.password}
-            updateModelValue={(password) => setForm({ ...form, password })}
-            field={{
-              title: "Mật khẩu",
-              label: 'Mật khẩu',
-              fieldName: "password",
-              type: "password",
-              placeholder: "Mật khẩu",
-              isRequired: true,
-              rules: rules,
-              errors: errors,
-
-            }}
-          />
+          <div className="text-center text-[20px]" > Đăng Nhập</div>
+          <div>
+            <InputText
+              className="w-full"
+              placeholder="Tài khoản"
+              value={form.username} onChange={(e) => setForm({ ...form, username: e.target.value })} />
+          </div>
+          <div>
+            <Password
+              placeholder="Mật khẩu"
+              value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} toggleMask />
+          </div>
           <div className="flex justify-center">
             <div onClick={() => login()}>
-              <Button title={"Đăng nhập"} />
+              <Button label="Đăng nhập" />
             </div>
           </div>
         </div>
