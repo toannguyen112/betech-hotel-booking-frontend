@@ -1,10 +1,21 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import Table from '../../../components/Table';
 import Authenticated from '../../../Layout/Authenticated'
+import { deleteAdmin, getListAdmin } from '../../../app/features/admin/adminAction';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 function Index() {
+
+  const dispatch = useDispatch();
+
   const admins = useSelector((state) => state.admin.admins);
+
+  const deleteRecord = async (id) => {
+    await dispatch(deleteAdmin(id));
+    await dispatch(getListAdmin());
+  }
+
   return (
     <Authenticated>
       <section>
@@ -12,6 +23,7 @@ function Index() {
           Account
         </div>
         <Table
+          deleteRecord={deleteRecord}
           route="/admin/account"
           isCreate={true}
           data={admins}

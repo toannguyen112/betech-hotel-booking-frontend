@@ -3,8 +3,12 @@ import {
 } from "react-router-dom";
 
 import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Table(props) {
+
+  const dispatch = useDispatch();
+
   return (
     <div className="overflow-x-auto">
       <div >
@@ -53,9 +57,15 @@ export default function Table(props) {
                     );
                   })}
                   <td>
-                    <Link to={`${props.route}/form?id=${datum['id']}`} >
-                      <button className="btn btn-secondary">Chi tiết</button>
-                    </Link>
+                    <div className="flex items-center space-x-[12px]">
+                      <Link to={`${props.route}/form?id=${datum['id']}`} >
+                        <button className="btn btn-secondary">Chi tiết</button>
+                      </Link>
+                      <button
+                        onClick={() => { props.deleteRecord(datum['id']) }}
+                        className="btn btn-secondary">Xóa</button>
+
+                    </div>
                   </td>
                 </tr>
               );

@@ -1,11 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import Table from '../../../components/Table';
 import Authenticated from '../../../Layout/Authenticated'
+import { deleteRole, getListRole } from '../../../app/features/role/roleAction';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Role() {
 
     const roles = useSelector((state) => state.role.roles);
+
+    const dispatch = useDispatch();
+
+    const deleteRecord = async (id) => {
+        await dispatch(deleteRole(id));
+        await dispatch(getListRole());
+    }
 
     return (
         <Authenticated>
@@ -13,6 +21,7 @@ function Role() {
                 Role
             </div>
             <Table
+                deleteRecord={deleteRecord}
                 isCreate={true}
                 route="/admin/role"
                 data={roles}

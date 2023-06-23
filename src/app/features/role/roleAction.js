@@ -71,5 +71,27 @@ export const getListRole = createAsyncThunk(
     }
 )
 
+export const deleteRole = createAsyncThunk(
+    'role/deleteRole',
+    async (id, { getState, rejectWithValue }) => {
+        try {
+            const { admin } = getState()
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${admin.adminToken}`,
+                },
+            }
+
+            return await axios.delete(`/role/delete/${id}`, config)
+
+        } catch (error) {
+            if (error.response && error.response.data.message) {
+                return rejectWithValue(error.response.data.message)
+            } else {
+                return rejectWithValue(error.message)
+            }
+        }
+    }
+)
 
 
