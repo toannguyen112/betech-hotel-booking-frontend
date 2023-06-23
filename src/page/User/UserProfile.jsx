@@ -17,6 +17,9 @@ function UserProfile() {
     });
 
     const update = async () => {
+        if (form.phone.length > 11) {
+            return alert("Số điện thoại không được quá 11 số")
+        }
         await dispatch(updateUser(form));
         alert("Cập nhật thành công")
     }
