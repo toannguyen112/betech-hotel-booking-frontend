@@ -3,7 +3,7 @@ import FieldSet from "../../components/Fields/FieldSet";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Slider from "../../components/Slider";
-import { sizesData } from "../../seeds/data";
+import { sizesData, regionsData } from "../../seeds/data";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -20,12 +20,15 @@ function TenantRoomUpdate() {
 
     let { id } = useParams();
 
+    const [regions, setRegions] = useState(regionsData);
+
     const [images, setImages] = useState([]);
 
     const [form, setForm] = useState({
         name: "",
         info: "",
         category_id: 1,
+        city_id: 1,
         tenant_id: 1,
         address: "",
         size: 0,
@@ -142,6 +145,17 @@ function TenantRoomUpdate() {
                                 title: "Diện tích",
                                 type: "select_single",
                                 options: sizes
+                            }}
+                        />
+                    </div>
+                    <div className="col-span-4">
+                        <FieldSet
+                            updateModelValue={(city_id) => setForm({ ...form, city_id })}
+                            field={{
+                                typeValue: "id",
+                                title: "Tỉnh/thành phố",
+                                type: "select_single",
+                                options: regions,
                             }}
                         />
                     </div>

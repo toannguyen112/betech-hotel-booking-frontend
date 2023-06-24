@@ -28,15 +28,15 @@ export const pricesData = [
 export const sizesData = [
     {
         id: 1,
-        name: 1,
+        name: "1 - 100m2",
     },
     {
         id: 2,
-        name: 10,
+        name: "100 - 200m2",
     },
     {
         id: 3,
-        name: 20,
+        name: "200 - 300m2",
     }
 ]
 

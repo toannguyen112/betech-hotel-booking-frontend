@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import CategoriesApi from "../api/services/CategoriesApi";
-import { sizesData } from "../seeds/data";
+import { sizesData, regionsData } from "../seeds/data";
 import { useDispatch } from "react-redux";
 import { createRoom } from "../app/features/room/roomAction";
 import { useNavigate } from "react-router-dom";
@@ -19,10 +19,13 @@ registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 
 function PostRoom() {
 
+  const [regions, setRegions] = useState(regionsData);
+
   const [form, setForm] = useState({
-    name: "232",
+    name: "",
     info: "",
     category_id: 1,
+    city_id: 1,
     address: "",
     size: 0,
     number_room: 0,
@@ -163,6 +166,17 @@ function PostRoom() {
                   title: "Lng",
                   type: "number",
                   placeholder: "Lng",
+                }}
+              />
+            </div>
+            <div className="col-span-4">
+              <FieldSet
+                updateModelValue={(city_id) => setForm({ ...form, city_id })}
+                field={{
+                  typeValue: "id",
+                  title: "Tỉnh/thành phố",
+                  type: "select_single",
+                  options: regions,
                 }}
               />
             </div>
