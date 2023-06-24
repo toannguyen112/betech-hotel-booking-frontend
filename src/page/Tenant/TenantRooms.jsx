@@ -34,7 +34,7 @@ function TenantRooms() {
                                         }
                                         <div className="p-5">
                                             <div href="#">
-                                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.name} </h5>
+                                                <h5 className="mb-2 text-[20px] font-bold tracking-tight text-gray-900 dark:text-white">{item.name} </h5>
                                             </div>
                                             {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.info} </p> */}
                                             <div className='space-x-2 flex overflow-x-auto items-center'>

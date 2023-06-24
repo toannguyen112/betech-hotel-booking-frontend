@@ -128,6 +128,32 @@ export const createTenant = createAsyncThunk(
     }
 )
 
+export const deleteTenant = createAsyncThunk(
+    'tenant/deleteTenant',
+    async (id, { getState, rejectWithValue }) => {
+        try {
+
+            const { admin } = getState()
+
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${admin.adminToken}`,
+                },
+            }
+
+            const { data } = await axios.delete(`/tenant/delete/${id}`, config)
+            return data;
+
+        } catch (error) {
+            if (error.response && error.response.data.message) {
+                return rejectWithValue(error.response.data.message)
+            } else {
+                return rejectWithValue(error.message)
+            }
+        }
+    }
+)
+
 export const deleteTenantRoom = createAsyncThunk(
     'tenant/deleteTenantRoom',
     async (arg, { getState, rejectWithValue }) => {
@@ -138,7 +164,7 @@ export const deleteTenantRoom = createAsyncThunk(
                     Authorization: `Bearer ${tenant.tenantToken}`,
                 },
             }
-            const { data } = await axios.delete(`/rooms/delete/${arg.id}`, arg, config)
+            const { data } = await axios.delete(`/tenant/delete/${arg.id}`, arg, config)
             return data;
 
         } catch (error) {

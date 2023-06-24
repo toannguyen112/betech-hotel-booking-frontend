@@ -139,5 +139,29 @@ export const updateUser = createAsyncThunk(
     }
 )
 
+export const deleteUser = createAsyncThunk(
+    'user/deleteUser',
+    async (id, { getState, rejectWithValue }) => {
+        try {
+            const { user } = getState()
+
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${user.userToken}`,
+                },
+            }
+            const { data } = await axios.delete(`/user/delete/${id}`, config)
+            return data;
+
+        } catch (error) {
+            if (error.response && error.response.data.message) {
+                return rejectWithValue(error.response.data.message)
+            } else {
+                return rejectWithValue(error.message)
+            }
+        }
+    }
+)
+
 
 
