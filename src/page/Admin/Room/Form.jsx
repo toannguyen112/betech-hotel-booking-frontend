@@ -185,11 +185,11 @@ function Form() {
               title: "Trạng thái",
               type: "select_single",
               options: [{
-                name: "Active",
+                name: "Hoạt động",
                 value: "ACTIVE"
               },
               {
-                name: "Inactive",
+                name: "Ẩn",
                 value: "INACTIVE"
               }],
             }}

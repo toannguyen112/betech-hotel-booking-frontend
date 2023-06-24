@@ -19,6 +19,7 @@ export const tenantLogin = createAsyncThunk(
             localStorage.setItem('tenantToken', data.token)
             return data
         } catch (error) {
+            alert(error.response.data);
             if (error.response && error.response.data.message) {
                 return rejectWithValue(error.response.data.message)
             } else {
@@ -164,7 +165,7 @@ export const deleteTenantRoom = createAsyncThunk(
                     Authorization: `Bearer ${tenant.tenantToken}`,
                 },
             }
-            const { data } = await axios.delete(`/tenant/delete/${arg.id}`, arg, config)
+            const { data } = await axios.delete(`/tenant/delete-room/${arg.id}`, config)
             return data;
 
         } catch (error) {
