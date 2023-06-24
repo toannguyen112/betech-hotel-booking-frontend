@@ -1,27 +1,27 @@
 export const pricesData = [
     {
         id: 1,
-        name: 500000,
+        name: "500.000 vnd",
     },
     {
         id: 2,
-        name: 1000000,
+        name: "100.000vnd",
     },
     {
         id: 3,
-        name: 2000000,
+        name: "200.000vnd",
     },
     {
         id: 4,
-        name: 500000,
+        name: "300.000vnd",
     },
     {
         id: 5,
-        name: 1000000,
+        name: "400.000vnd",
     },
     {
         id: 6,
-        name: 2000000,
+        name: "500.000vnd",
     }
 ]
 
