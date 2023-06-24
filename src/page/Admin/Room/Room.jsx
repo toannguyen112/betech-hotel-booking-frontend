@@ -24,6 +24,7 @@ function Room() {
         Room
       </div>
       <Table
+      isDelete={false}
         route="/admin/room"
         data={rooms}
         columns={[

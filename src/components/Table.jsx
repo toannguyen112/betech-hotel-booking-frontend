@@ -61,9 +61,13 @@ export default function Table(props) {
                       <Link to={`${props.route}/form?id=${datum['id']}`} >
                         <button className="btn btn-secondary">Chi tiết</button>
                       </Link>
-                      <button
-                        onClick={() => { props.deleteRecord(datum['id']) }}
-                        className="btn btn-secondary">Xóa</button>
+                      {
+                        props.isDelete ?? (
+                          <button
+                            onClick={() => { props.deleteRecord(datum['id']) }}
+                            className="btn btn-secondary">Xóa</button>
+                        )
+                      }
 
                     </div>
                   </td>
