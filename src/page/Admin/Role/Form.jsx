@@ -89,7 +89,7 @@ function Form() {
                                 {permissions.map((item, index) => {
                                     return (
                                         <Row key={index}>
-                                            <Checkbox value={item.id}>{item.perm_name}</Checkbox>
+                                            <Checkbox value={item.id}>{item.perm_description}</Checkbox>
                                         </Row>
                                     )
                                 })}
