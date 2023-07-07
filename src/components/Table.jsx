@@ -9,6 +9,18 @@ export default function Table(props) {
 
   const dispatch = useDispatch();
 
+  const renderField = (data) => {
+    if (data === "ACTIVE") {
+      return "Hoạt động";
+    }
+
+    if (data === "INACTIVE") {
+      return "Ngừng hoạt động";
+    }
+
+    return data;
+  }
+
   return (
     <div className="overflow-x-auto">
       <div >
@@ -51,7 +63,7 @@ export default function Table(props) {
                               alt=""
                               src={datum[col.field]} className="w-full h-full aspect-square" />
                           </div>
-                        ) : <span>{datum[col.field]}</span>}
+                        ) : <span> {renderField(datum[col.field])} </span>}
 
                       </td>
                     );
