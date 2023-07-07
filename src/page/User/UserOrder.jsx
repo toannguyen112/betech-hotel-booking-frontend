@@ -46,7 +46,6 @@ function UserOrder() {
                   <div key={index} className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 col-span-3">
                     <div className="p-5">
                       <h5 className="mb-2 text-lg font-bold tracking-tight  text-black">{item.room_name} </h5>
-                      <h5 className="mb-2 text-lg font-bold tracking-tight  text-black">{item.id} </h5>
                       <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Giá:{item.room_price}đ </h6>
                       <h6 className="mb-2 text-sm font-bold tracking-tight  text-black">Trạng thái:{item.status} </h6>
                       <div className='space-x-2 flex'>
