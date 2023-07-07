@@ -33,7 +33,7 @@ function Tenant() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Tenant
+        Người thuê
       </div>
       {!isLoading ? (
         <Table

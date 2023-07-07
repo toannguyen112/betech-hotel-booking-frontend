@@ -18,7 +18,7 @@ function Role() {
     return (
         <Authenticated>
             <div className="font-bold text-[32px] py-[32px]">
-                Role
+                Vai trò
             </div>
             <Table
                 deleteRecord={deleteRecord}

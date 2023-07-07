@@ -21,10 +21,10 @@ function Room() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Room
+        Danh sách phòng
       </div>
       <Table
-      isDelete={false}
+        isDelete={false}
         route="/admin/room"
         data={rooms}
         columns={[

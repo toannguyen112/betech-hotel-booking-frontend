@@ -209,7 +209,7 @@ function Form() {
         </div>
         <div>
           <button className="btn btn-primary text-[12px] w-[150px]" onClick={() => update()}>
-            Update Status
+            Cập nhật
           </button>
         </div>
       </div>

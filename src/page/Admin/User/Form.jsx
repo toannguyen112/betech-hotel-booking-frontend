@@ -32,7 +32,7 @@ function Form() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        User/edit/{id}
+        Người dùng / Chỉnh sửa /{id}
       </div>
       <div className='grid grid-cols-12 gap-[32px]'>
         <div className='col-span-6'>
@@ -97,27 +97,6 @@ function Form() {
             }}
           />
         </div>
-        {/* <div className='col-span-6'>
-          <FieldSet
-            updateModelValue={(status) => setForm({ ...form, status })}
-            modelValue={form.status}
-            field={{
-              className: "w-full border-[0.5px] border-black rounded-md p-[12px] ",
-              typeValue: "string",
-              title: "Trạng thái",
-              type: "select_single",
-              disable: true,
-              options: [{
-                name: "Active",
-                value: "ACTIVE"
-              },
-              {
-                name: "Inactive",
-                value: "INACTIVE"
-              }],
-            }}
-          />
-        </div> */}
       </div>
     </Authenticated>
   )

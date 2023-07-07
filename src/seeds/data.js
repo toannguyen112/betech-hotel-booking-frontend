@@ -5,23 +5,23 @@ export const pricesData = [
     },
     {
         id: 2,
-        name: "100000",
+        name: "1000000",
     },
     {
         id: 3,
-        name: "200000",
+        name: "2000000",
     },
     {
         id: 4,
-        name: "300000",
+        name: "3000000",
     },
     {
         id: 5,
-        name: "400000",
+        name: "4000000",
     },
     {
         id: 6,
-        name: "500000",
+        name: "5000000",
     }
 ]
 

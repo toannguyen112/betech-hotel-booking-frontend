@@ -54,7 +54,7 @@ function Form() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Tenant/edit/{id}
+        Người thuê / Chỉnh sửa /{id}
       </div>
       <div className='grid grid-cols-12 gap-[32px]'>
         <div className='col-span-6'>
@@ -89,7 +89,7 @@ function Form() {
           />
         </div>
         <button className="btn btn-primary" onClick={() => update()}>
-          Update
+          Cập nhật
         </button>
       </div>
     </Authenticated>

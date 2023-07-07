@@ -33,7 +33,7 @@ function User() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        User
+        Người dùng
       </div>
       {!isLoading ? (
         <Table

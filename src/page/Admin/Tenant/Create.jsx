@@ -30,7 +30,7 @@ function Create() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Tenant/create
+        Người thuê / Tạo mới
       </div>
       <div className='grid grid-cols-12 gap-[32px]'>
         <div className='col-span-6'>

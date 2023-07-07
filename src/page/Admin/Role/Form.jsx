@@ -97,7 +97,7 @@ function Form() {
                         </div>
                         <div className="col-span-full">
                             <button className="btn btn-secondary" onClick={() => handleSubmit()}>
-                                Update
+                                Cập nhật
                             </button>
                         </div>
                     </div>

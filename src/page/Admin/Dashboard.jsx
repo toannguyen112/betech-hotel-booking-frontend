@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Dashboard
+        Thống kê
       </div>
       <main>
         <div className="font-bold text-[32px] py-[32px]">

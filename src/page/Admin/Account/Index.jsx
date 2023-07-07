@@ -20,7 +20,7 @@ function Index() {
     <Authenticated>
       <section>
         <div className="font-bold text-[32px] py-[32px]">
-          Account
+          Tài khoản
         </div>
         <Table
           deleteRecord={deleteRecord}
