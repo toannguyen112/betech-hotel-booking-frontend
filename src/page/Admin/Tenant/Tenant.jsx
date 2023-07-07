@@ -43,10 +43,10 @@ function Tenant() {
           data={tenants}
           columns={[
             { field: "id", label: "id" },
-            { field: "username", label: "username" },
-            { field: "phone", label: "phone" },
-            { field: "createdAt", label: "createdAt" },
-            { field: "updatedAt", label: "updatedAt" },
+            { field: "username", label: "Tên" },
+            { field: "phone", label: "Số điện thoại" },
+            { field: "createdAt", label: "Ngày tạo" },
+            { field: "updatedAt", label: "Ngày cập nhật" },
           ]} />
       ) : <div>Loading...</div>}
 

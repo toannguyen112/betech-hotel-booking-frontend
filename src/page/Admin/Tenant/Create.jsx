@@ -39,8 +39,8 @@ function Create() {
             modelValue={form.username}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "username",
-              placeholder: "username",
+              title: "Tài khoản",
+              placeholder: "Tài khoản",
             }}
           />
         </div>
@@ -50,8 +50,8 @@ function Create() {
             modelValue={form.password}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "password",
-              placeholder: "password",
+              title: "Mật khẩu",
+              placeholder: "Mật khẩu",
             }}
           />
         </div>

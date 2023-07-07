@@ -65,8 +65,8 @@ function Form() {
                             updateModelValue={(name) => setForm({ ...form, name })}
                             field={{
                                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                                title: "Name",
-                                placeholder: "Name",
+                                title: "Tên",
+                                placeholder: "Tên",
                             }}
                         />
                     </div>
@@ -76,8 +76,8 @@ function Form() {
                             updateModelValue={(username) => setForm({ ...form, username })}
                             field={{
                                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                                title: "Username",
-                                placeholder: "Username",
+                                title: "Tài khoản",
+                                placeholder: "Tài khoản",
                             }}
                         />
                     </div>
@@ -87,8 +87,8 @@ function Form() {
                             updateModelValue={(password) => setForm({ ...form, password })}
                             field={{
                                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                                title: "Password",
-                                placeholder: "Password",
+                                title: "Mật khẩu",
+                                placeholder: "Mật khẩu",
                             }}
                         />
                     </div>
@@ -99,7 +99,7 @@ function Form() {
                             field={{
                                 className: "w-full border-[0.5px] border-black rounded-md  p-[12px] h-full",
                                 typeValue: "id",
-                                title: "Role",
+                                title: "Vai trò",
                                 type: "select_single",
                                 options: roles,
                             }}

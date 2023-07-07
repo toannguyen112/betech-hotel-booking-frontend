@@ -68,9 +68,9 @@ function Profile() {
                 updateModelValue={(password) => setForm({ ...form, password })}
                 field={{
                   className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                  title: "Password",
+                  title: "Mật khẩu",
                   type: "password",
-                  placeholder: "password",
+                  placeholder: "Mật khẩu",
                 }}
               />
             </div>

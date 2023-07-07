@@ -27,9 +27,9 @@ function Role() {
                 data={roles}
                 columns={[
                     { field: "id", label: "id" },
-                    { field: "role_name", label: "role_name" },
-                    { field: "createdAt", label: "createdAt" },
-                    { field: "updatedAt", label: "updatedAt" },
+                    { field: "role_name", label: "Tên" },
+                    { field: "createdAt", label: "Ngày tạo" },
+                    { field: "updatedAt", label: "Ngày cập nhật" },
                 ]} />
 
         </Authenticated>

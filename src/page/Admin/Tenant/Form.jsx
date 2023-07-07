@@ -63,8 +63,8 @@ function Form() {
             modelValue={form.username}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Username",
-              placeholder: "Username",
+              title: "Tài khoản",
+              placeholder: "Tài khoản",
               isRequired: true,
               fieldName: "username",
               rules: rules,
@@ -78,9 +78,9 @@ function Form() {
             modelValue={form.password}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Password",
+              title: "Mật khẩu",
               type: "password",
-              placeholder: "password",
+              placeholder: "Mật khẩu",
               isRequired: true,
               fieldName: "password",
               rules: rules,

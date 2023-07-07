@@ -41,8 +41,8 @@ function Form() {
             modelValue={form.username}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Username",
-              placeholder: "Username",
+              title: "Tài khoản",
+              placeholder: "Tài khoản",
               isRequired: true,
               fieldName: "username",
               rules: rules,
@@ -57,9 +57,9 @@ function Form() {
             modelValue={form.password}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Password",
+              title: "Mật khẩu",
               type: "password",
-              placeholder: "password",
+              placeholder: "Mật khẩu",
               isRequired: true,
               fieldName: "password",
               rules: rules,
@@ -75,7 +75,7 @@ function Form() {
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
               title: "Địa chỉ",
-              placeholder: "address",
+              placeholder: "Địa chỉ",
               isRequired: true,
               fieldName: "address",
               rules: rules,
@@ -90,9 +90,9 @@ function Form() {
             modelValue={form.phone}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md p-[12px] ",
-              title: "Phone",
+              title: "Số điện thoại",
               type: "number",
-              placeholder: "phone",
+              placeholder: "Số điện thoại",
               disable: true,
             }}
           />

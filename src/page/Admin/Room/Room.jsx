@@ -29,11 +29,11 @@ function Room() {
         data={rooms}
         columns={[
           { field: "id", label: "id" },
-          { field: "name", label: "name" },
-          { field: "price", label: "price" },
-          { field: "status", label: "status" },
-          { field: "phone", label: "phone" },
-          { field: "star", label: "star" },
+          { field: "name", label: "Tên" },
+          { field: "price", label: "Giá" },
+          { field: "status", label: "Trạng thái" },
+          { field: "phone", label: "Số điện thoại" },
+          { field: "star", label: "Đánh giá" },
         ]} />
 
     </Authenticated>

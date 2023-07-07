@@ -29,10 +29,10 @@ function Index() {
           data={admins}
           columns={[
             { field: "id", label: "id" },
-            { field: "name", label: "name" },
-            { field: "username", label: "username" },
-            { field: "createdAt", label: "createdAt" },
-            { field: "updatedAt", label: "updatedAt" },
+            { field: "name", label: "Tên" },
+            { field: "username", label: "Tài khoản" },
+            { field: "createdAt", label: "Ngày tạo" },
+            { field: "updatedAt", label: "Ngày cập nhật" },
           ]} />
       </section>
     </Authenticated>

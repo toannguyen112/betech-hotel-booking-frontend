@@ -5,14 +5,24 @@ import RoomApi from '../../../api/services/RoomApi';
 import { updateStatus } from '../../../app/features/room/roomAction';
 import FieldSet from '../../../components/Fields/FieldSet';
 import Authenticated from '../../../Layout/Authenticated'
+import { useSelector } from "react-redux";
+
+import { pricesData, regionsData, sizesData } from "../../../seeds/data";
 
 function Form() {
 
+  const categories = useSelector((state) => state.room.categories);
   const search = useLocation().search;
   const id = new URLSearchParams(search).get("id");
   const [errors, setErrors] = useState({});
 
   const [images, setImages] = useState([])
+
+  const [prices, setPrices] = useState(pricesData);
+
+  const [sizes, setSizes] = useState(sizesData);
+
+  const [regions, setRegions] = useState(regionsData);
 
   const [rules, setRules] = useState({
     "name": "required",
@@ -81,8 +91,10 @@ function Form() {
             modelValue={form.category_id}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "category_id",
-              placeholder: "category_id",
+              title: "Danh mục",
+              placeholder: "Danh mục",
+              typeValue: "id",
+              options: categories,
               disable: true,
               isRequired: true,
               fieldName: "category_id",
@@ -94,12 +106,14 @@ function Form() {
         <div className='col-span-6'>
           <FieldSet
             updateModelValue={(city_id) => setForm({ ...form, city_id })}
-            modelValue={form.category_id}
+            modelValue={form.city_id}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "city_id",
+              title: "Thành phố",
+              typeValue: "id",
+              options: regionsData,
               disable: true,
-              placeholder: "city_id",
+              placeholder: "Thành phố",
               isRequired: true,
               fieldName: "city_id",
               rules: rules,
@@ -113,7 +127,7 @@ function Form() {
             modelValue={form.exp_date}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "exp_date",
+              title: "Ngày hết hạn",
               type: "date",
               disable: true,
               placeholder: "exp_date",
@@ -130,7 +144,7 @@ function Form() {
             modelValue={form.category_id}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "number_room",
+              title: "Số phòng",
               type: "number",
               disable: true,
               placeholder: "number_room",
@@ -143,7 +157,7 @@ function Form() {
             modelValue={form.address}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "address",
+              title: "Địa chỉ",
               disable: true,
               placeholder: "address",
             }}
@@ -155,7 +169,7 @@ function Form() {
             modelValue={form.price}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "price",
+              title: "Giá",
               type: "number",
               disable: true,
               placeholder: "price",
@@ -168,7 +182,7 @@ function Form() {
             modelValue={form.info}
             field={{
               className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Phone",
+              title: "Số điện thoại",
               type: "number",
               disable: true,
               placeholder: "Phone",
