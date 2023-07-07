@@ -3,7 +3,6 @@ import FieldSet from "../components/Fields/FieldSet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
-import CategoriesApi from "../api/services/CategoriesApi";
 import { sizesData, regionsData } from "../seeds/data";
 import { useDispatch } from "react-redux";
 import { createRoom } from "../app/features/room/roomAction";
@@ -14,6 +13,7 @@ import 'filepond/dist/filepond.min.css'
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css'
+import { useSelector } from "react-redux";
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 
@@ -24,6 +24,7 @@ function PostRoom() {
   const [form, setForm] = useState({
     name: "",
     info: "",
+    phone: null,
     category_id: 1,
     city_id: 1,
     address: "",
@@ -39,18 +40,8 @@ function PostRoom() {
   const [files, setFiles] = useState([])
 
   const [imageFiles, setImageFiles] = useState([]);
-  const [categories, setCategories] = useState([])
 
-  useEffect(() => {
-    new CategoriesApi().getCategories().then((res) => {
-      const categories = res.data.data
-      setCategories(categories)
-    })
-  }, []);
-
-  const [fileList, setFileList] = useState([])
-
-  const formData = new FormData();
+  const categories = useSelector((state) => state.room.categories);
 
   const navigate = useNavigate();
 
@@ -89,6 +80,17 @@ function PostRoom() {
                   className: "w-full border rounded-md border-black p-[12px]",
                   title: "Tiêu đề",
                   placeholder: "Tiêu đề",
+                }}
+              />
+            </div>
+            <div className="col-span-4">
+              <FieldSet
+                updateModelValue={(phone) => setForm({ ...form, phone })}
+                field={{
+                  type: "number",
+                  className: "w-full border rounded-md border-black p-[12px]",
+                  title: "Số điện thoại",
+                  placeholder: "Số điện thoại",
                 }}
               />
             </div>
@@ -138,10 +140,11 @@ function PostRoom() {
             </div>
             <div className="col-span-4">
               <FieldSet
-                updateModelValue={(type_room) => setForm({ ...form, type_room })}
+                updateModelValue={(category_id) => setForm({ ...form, category_id })}
                 field={{
                   className: "w-full border rounded-md border-black p-[12px]",
                   title: "Thể loại",
+                  typeValue: "id",
                   type: "select_single",
                   options: categories
                 }}

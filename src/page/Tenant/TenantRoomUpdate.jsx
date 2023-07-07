@@ -22,11 +22,14 @@ function TenantRoomUpdate() {
 
     const [regions, setRegions] = useState(regionsData);
 
+    const categories = useSelector((state) => state.room.categories);
+
     const [images, setImages] = useState([]);
 
     const [form, setForm] = useState({
         name: "",
         info: "",
+        phone: null,
         category_id: 1,
         city_id: 1,
         tenant_id: 1,
@@ -53,8 +56,6 @@ function TenantRoomUpdate() {
     }, []);
 
     const navigate = useNavigate();
-
-    const categories = useSelector((state) => state.room.categories);
 
     const [files, setFiles] = useState([])
 
@@ -97,6 +98,18 @@ function TenantRoomUpdate() {
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Tiêu đề",
                                 placeholder: "Tiêu đề",
+                            }}
+                        />
+                    </div>
+                    <div className="col-span-4">
+                        <FieldSet
+                            modelValue={form.phone}
+                            updateModelValue={(phone) => setForm({ ...form, phone })}
+                            field={{
+                                type: "number",
+                                className: "w-full border rounded-md border-black p-[12px]",
+                                title: "Số điện thoại",
+                                placeholder: "Số điện thoại",
                             }}
                         />
                     </div>
@@ -150,6 +163,7 @@ function TenantRoomUpdate() {
                     </div>
                     <div className="col-span-4">
                         <FieldSet
+                            modelValue={form.city_id}
                             updateModelValue={(city_id) => setForm({ ...form, city_id })}
                             field={{
                                 typeValue: "id",
@@ -161,11 +175,12 @@ function TenantRoomUpdate() {
                     </div>
                     <div className="col-span-4">
                         <FieldSet
-                            modelValue={form.type_room}
-                            updateModelValue={(type_room) => setForm({ ...form, type_room })}
+                            modelValue={form.category_id}
+                            updateModelValue={(category_id) => setForm({ ...form, category_id })}
                             field={{
                                 className: "w-full border rounded-md border-black p-[12px]",
                                 title: "Thể loại",
+                                typeValue: "id",
                                 type: "select_single",
                                 options: categories
                             }}

@@ -58,7 +58,7 @@ function Form() {
     return (
         <Authenticated>
             <div className="font-bold text-[32px] py-[32px]">
-                Role / Chỉnh sửa /{id}
+                Vai trò / Chỉnh sửa /{id}
             </div>
             {
                 loading ? (
