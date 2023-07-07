@@ -152,9 +152,9 @@ function PostRoom() {
                 updateModelValue={(lat) => setForm({ ...form, lat })}
                 field={{
                   className: "w-full border rounded-md border-black p-[12px]",
-                  title: "Lat",
+                  title: "Tung độ",
                   type: "number",
-                  placeholder: "Lat",
+                  placeholder: "Tung độ",
                 }}
               />
             </div>
@@ -163,9 +163,9 @@ function PostRoom() {
                 updateModelValue={(lng) => setForm({ ...form, lng })}
                 field={{
                   className: "w-full border rounded-md border-black p-[12px]",
-                  title: "Lng",
+                  title: "Vĩ độ",
                   type: "number",
-                  placeholder: "Lng",
+                  placeholder: "Vĩ độ",
                 }}
               />
             </div>

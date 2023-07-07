@@ -37,7 +37,7 @@ function AdminLogin() {
     const errors = validateForm(form, rules);
     setErrors(errors)
     if (Object.keys(errors).length > 0) {
-      if (errors.username === '' && errors.password === '') return alert("Please input your username and password");
+      if (errors.username === '' && errors.password === '') return alert("Hãy nhập tài khoản và mật khẩu");
 
       if (errors.username === '') return alert("Please input your username");
 

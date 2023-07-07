@@ -30,7 +30,7 @@ function UserProfile() {
             {
                 userInfo ? (
                     <section className='container '>
-                        <div className='text-center text-[40px] py-[64px] font-bold'>User Profile</div>
+                        <div className='text-center text-[40px] py-[64px] font-bold'>Hồ sơ</div>
                         <section className='grid grid-cols-12 gap-[32px] pb-[32px]'>
                             <div className='col-span-6'>
                                 <FieldSet

@@ -35,7 +35,7 @@ function Profile() {
   return (
     <Authenticated>
       <div className="font-bold text-[32px] py-[32px]">
-        Profile
+        Hồ sơ
       </div>
       {
         adminInfo ? (
@@ -91,9 +91,9 @@ function Profile() {
                 updateModelValue={(phone) => setForm({ ...form, phone })}
                 field={{
                   className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-                  title: "Phone",
+                  title: "Số điện thoại",
                   type: "number",
-                  placeholder: "Phone",
+                  placeholder: "Số điện thoại",
                 }}
               />
             </div>

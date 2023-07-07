@@ -38,7 +38,7 @@ function TenantLoginPage() {
     setErrors(errors)
 
     if (Object.keys(errors).length > 0) {
-      if (errors.username === '' && errors.password === '') return alertMessage("Please input your username and password", "error");
+      if (errors.username === '' && errors.password === '') return alertMessage("Hãy nhập tài khoản và mật khẩu", "error");
 
       if (errors.username === '') return alertMessage("Please input your username", "error");
 

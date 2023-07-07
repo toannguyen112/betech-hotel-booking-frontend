@@ -88,9 +88,9 @@ function Form() {
             }}
           />
         </div>
-        <button className="btn btn-primary" onClick={() => update()}>
+        <div className="btn btn-primary" onClick={() => update()}>
           Cập nhật
-        </button>
+        </div>
       </div>
     </Authenticated>
   )
