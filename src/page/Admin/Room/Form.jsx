@@ -52,6 +52,7 @@ function Form() {
   const [form, setForm] = useState({
     name: "toan",
     category_id: "",
+    phone: "",
     city_id: "",
     exp_date: "",
     info: "",
@@ -88,36 +89,25 @@ function Form() {
         <div className='col-span-6'>
           <FieldSet
             updateModelValue={(category_id) => setForm({ ...form, category_id })}
-            modelValue={form.category_id}
             field={{
-              className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Danh mục",
-              placeholder: "Danh mục",
-              typeValue: "id",
-              options: categories,
               disable: true,
-              isRequired: true,
-              fieldName: "category_id",
-              rules: rules,
-              errors: errors,
+              className: "w-full border rounded-md border-black p-[12px]",
+              title: "Thể loại",
+              typeValue: "id",
+              type: "select_single",
+              options: categories
             }}
           />
         </div>
         <div className='col-span-6'>
           <FieldSet
             updateModelValue={(city_id) => setForm({ ...form, city_id })}
-            modelValue={form.city_id}
             field={{
-              className: "w-full border-[0.5px] border-black rounded-md  p-[12px] ",
-              title: "Thành phố",
+              disable:true,
               typeValue: "id",
-              options: regionsData,
-              disable: true,
-              placeholder: "Thành phố",
-              isRequired: true,
-              fieldName: "city_id",
-              rules: rules,
-              errors: errors,
+              title: "Tỉnh/thành phố",
+              type: "select_single",
+              options: regions,
             }}
           />
         </div>
