@@ -55,9 +55,11 @@ function Create() {
             }}
           />
         </div>
-        <button className="btn btn-primary" onClick={() => submit()}>
-          Submit
-        </button>
+        <div>
+          <button className="btn btn-primary" onClick={() => submit()}>
+            Gứi
+          </button>
+        </div>
       </div>
     </Authenticated>
   )
